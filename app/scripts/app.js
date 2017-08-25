@@ -25,7 +25,7 @@ app.config(function($routeProvider) {
 			controller: 'DetailsCtrl'
 		})
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: '/details'
 		});
 
 });
