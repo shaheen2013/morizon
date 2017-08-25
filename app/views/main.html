@@ -1,0 +1,181 @@
+        <section class="view_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="view_table">
+                            <div class="notification">
+                                <a href="#">
+                                  <img src="images/alarm.jpg" alt="">
+                                  <span>0</span>
+                                </a>
+                            </div>
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General View</a></li>
+                            <li role="presentation"><a href="#running" aria-controls="running" role="tab" data-toggle="tab">Running View</a></li>
+                          </ul>
+                          <br>
+                          <br>
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="general">
+                            <div class="run_area">
+                                <select>
+                                  <option value="0">ALL</option>
+                                  <option value="1">IDLE</option>
+                                  <option value="2">FAILED</option>
+                                  <option value="3">RUNNING (ALL)</option>
+                                  <option value="4">RUNNING JOB 1</option>
+                                  <option value="5">RUNNING JOB 2</option>
+                                </select>
+                                <span>
+                                   <a href="#"><img src="images/run-2.jpg" alt=""></a>
+                                </span>
+                                <span>
+                                   <a href="#"><img src="images/stop2.jpg" alt=""> </a>
+                                </span>
+                            </div>
+                             <div class="table-responsive">
+                                    <table class="table table-striped table-responsive">
+                                      <thead>
+                                        <tr>
+                                          <th><input id="checkBox" type="checkbox"></th>
+                                          <th>Scraper Name</th>
+                                          <th>Status</th>
+                                          <th>Run Started</th>
+                                          <th>Last Run Result</th>
+                                          <th>Date</th>
+                                          <th>Total Time</th>
+                                          <th>Total Listing <input id="checkBox" type="checkbox"></th>
+                                          <th>Current Listing</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td><input id="checkBox" type="checkbox"></td>
+                                          <td>sellogo.com</td>
+                                          <td>idle</td>
+                                          <td>-</td>
+                                          <td>ok</td>
+                                          <td>15 jul 2017</td>
+                                          <td>249 min</td>
+                                          <td>19,527</td>
+                                          <td>241,673</td>
+
+                                        </tr>
+                                        <tr>
+                                          <td><input id="checkBox" type="checkbox"></td>
+                                          <td>immobileate.it</td>
+                                          <td>running</td>
+                                          <td>30 jul 2017</td>
+                                          <td>-</td>
+                                          <td>18 jul 2017</td>
+                                          <td>449 min</td>
+                                          <td>39,527</td>
+                                          <td>541,673</td>
+
+                                        </tr>
+                                        <tr>
+                                          <td><input id="checkBox" type="checkbox"></td>
+                                          <td>immobileate.it</td>
+                                          <td>down</td>
+                                          <td>-</td>
+                                          <td>validation error</td>
+                                          <td>-</td>
+                                          <td>-</td>
+                                          <td>-</td>
+                                          <td>541,673</td>
+
+                                        </tr>
+                                      </tbody>
+                                    </table>    
+                              </div>             
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="running">
+                            <div class="run_area">
+                                <select>
+                                  <option value="volvo"></option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+                                <span>
+                                   <img src="images/run-2.jpg" alt=""> 
+                                </span>
+                                <span>
+                                   <img src="images/stop2.jpg" alt=""> 
+                                </span>
+                            </div>                            
+                            <div class="table-responsive">
+
+                                    <table class="table table-striped table-responsive">
+                                      <thead>
+                                        <tr>
+                                          <th><input id="checkBox" type="checkbox"></th>
+                                          <th>Scraper Name</th>
+                                          <th>Step </th>
+                                          <th>Time <input id="checkBox" type="checkbox"></th>
+                                          <th>Total <input id="checkBox" type="checkbox"></th>
+                                          <th>PPM</th>
+                                          <th>Req/Res</th>
+                                          <th>Failed/ <br>Blocked </th>
+                                          <th>Threads</th>
+                                          <th>Progress</th>
+                                          <th>Scrapped Count <br>(Job2)</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td><input id="checkBox" type="checkbox"></td>
+                                          <td>sellogo.com</td>
+                                          <td>job1(co)</td>
+                                          <td>29jul-15:24</td>
+                                          <td>-</td>
+                                          <td>700</td>
+                                          <td>1.67 sec</td>
+                                          <td>3 / 0</td>
+                                          <td>80</td>
+                                          <td>5%</td>
+                                          <td><span>0k:0</span>/<span>k0:0</span></td>
+
+                                        </tr>
+                                        <tr>
+                                          <td><input id="checkBox" type="checkbox"></td>
+                                          <td>immobile.de</td>
+                                          <td>job1(co)</td>
+                                          <td>29jul-15:24</td>
+                                          <td>758,356</td>
+                                          <td>700</td>
+                                          <td>1.67 sec</td>
+                                          <td>3 / 0</td>
+                                          <td>80</td>
+                                          <td>5%</td>
+                                          <td><span>0k:0</span>/<span>k0:0</span></td>
+
+                                        </tr>
+                                        <tr>
+                                          <td><input id="checkBox" type="checkbox"></td>
+                                          <td>sellogo.com</td>
+                                          <td>job1(co)</td>
+                                          <td>29jul-15:24</td>
+                                          <td>758,356</td>
+                                          <td>700</td>
+                                          <td>1.67 sec</td>
+                                          <td>3 / 0</td>
+                                          <td>80</td>
+                                          <td>5%</td>
+                                          <td><span>0k:0</span>/<span>k0:0</span></td>
+
+                                        </tr>
+                                      </tbody>                                   
+                                    </table>
+
+                            </div>                                  
+                            </div>
+                          </div>
+                        </div>
+                                                               
+                    </div>
+                </div>
+            </div>
+        </section>
