@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('morizonApp').controller('DetailsCtrl', function ($scope, $http) {
+angular.module('morizonApp').controller('DetailsCtrl', function ($scope, $http, APIService) {
 
 
 	//$scope.fetchDetailsData = function() {

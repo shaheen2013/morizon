@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('morizonApp').controller('DashboardCtrl', function ($scope, $http) {
+angular.module('morizonApp').controller('DashboardCtrl', function ($scope, $http, APIService) {
 
 	//$httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 	$http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
