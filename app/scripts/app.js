@@ -10,7 +10,8 @@
  */
 var app = angular.module('morizonApp', [
     'ngCookies',
-    'ngRoute'
+    'ngRoute',
+	'ui.bootstrap'
 ]);
 
 app.config(function($routeProvider) {
@@ -20,12 +21,12 @@ app.config(function($routeProvider) {
 			templateUrl: 'views/main.html',
 			controller: 'DashboardCtrl'
 		})
-		.when('/details', {
+		.when('/details/:siteId', {
 			templateUrl: 'views/details.html',
 			controller: 'DetailsCtrl'
 		})
 		.otherwise({
-			redirectTo: '/details'
+			redirectTo: '/'
 		});
 
 });

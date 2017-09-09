@@ -15,7 +15,59 @@ angular.module('morizonApp').controller('DashboardCtrl', function ($scope, $http
         //$scope.content = "Something went wrong";
     });
 
+    $scope.pushData  = {};
+    var socket = io.connect('http://scraperhanlder.herokuapp.com');
+    socket.on('pushdata', function (data) {
+        $scope.pushData = data;
+        $scope.$apply();
+        console.log(data);
+        //socket.emit('my other event', { my: 'data' });
+    });
+    $scope.startService = function () {
+        var url = "http://94.23.12.200:8181/api/v1/startScrapers";
 
-	
-    
+        var data = [
+            {"siteAlias" : "morizon"}
+        ];
+
+        var config = {
+            headers : {
+                'Content-Type': 'application/json'
+            }
+        };
+        $http.post(url, data, config)
+            .then(function(response) {
+                console.log(response.status);
+                console.log("data---", response.data);
+                alert(response.data);
+                //$scope.content = response.data;
+            }, function(response) {
+                console.log('Not Worked ' + response);
+                //$scope.content = "Something went wrong";
+            });
+
+    };$scope.stopService = function () {
+        var url = "http://94.23.12.200:8181/api/v1/stopScrapers";
+
+        var data = [
+            {"siteAlias" : "morizon"}
+        ];
+
+        var config = {
+            headers : {
+                'Content-Type': 'application/json'
+            }
+        };
+        $http.post(url, data, config)
+            .then(function(response) {
+                console.log(response.status);
+                console.log("data---", response.data);
+                alert(response.data);
+                //$scope.content = response.data;
+            }, function(response) {
+                console.log('Not Worked ' + response);
+                //$scope.content = "Something went wrong";
+            });
+
+    };
 });

@@ -29,10 +29,10 @@
                                   <option value="5">RUNNING JOB 2</option>
                                 </select>
                                 <span>
-                                   <a href="#"><img src="images/run-2.jpg" alt=""></a>
+                                   <a href ng-click="startService()"><img src="images/run-2.jpg" alt=""></a>
                                 </span>
                                 <span>
-                                   <a href="#"><img src="images/stop2.jpg" alt=""> </a>
+                                   <a href ng-click="stopService()"><img src="images/stop2.jpg" alt=""> </a>
                                 </span>
                             </div>
                              <div class="table-responsive">
@@ -53,7 +53,7 @@
                                       <tbody>
                                         <tr>
                                           <td><input id="checkBox" type="checkbox"></td>
-                                          <td>sellogo.com</td>
+                                          <td><a ng-href="#!/details/{{ 'sellogo' }}">sellogo.com</a></td>
                                           <td>idle</td>
                                           <td>-</td>
                                           <td>ok</td>
@@ -100,10 +100,10 @@
                                   <option value="audi">Audi</option>
                                 </select>
                                 <span>
-                                   <img src="images/run-2.jpg" alt=""> 
+                                   <a href ng-click="startService()"><img src="images/run-2.jpg" alt=""></a>
                                 </span>
                                 <span>
-                                   <img src="images/stop2.jpg" alt=""> 
+                                   <a href ng-click="stopService()"><img src="images/stop2.jpg" alt=""> </a>
                                 </span>
                             </div>                            
                             <div class="table-responsive">
@@ -179,3 +179,10 @@
                 </div>
             </div>
         </section>
+<section>
+    <div class="well">
+        <pre>
+            {{pushData}}
+        </pre>
+    </div>
+</section>
