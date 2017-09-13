@@ -51,42 +51,18 @@
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
+                                      <tr ng-repeat="row in allGeneralStatus">
                                           <td><input id="checkBox" type="checkbox"></td>
-                                          <td><a ng-href="#!/details/{{ 'sellogo' }}">sellogo.com</a></td>
-                                          <td>idle</td>
-                                          <td>-</td>
-                                          <td>ok</td>
-                                          <td>15 jul 2017</td>
-                                          <td>249 min</td>
-                                          <td>19,527</td>
-                                          <td>241,673</td>
+                                          <td><a ng-href="#!/details/{{ row.scraperDetails.siteAlias }}">{{row.scraperDetails.siteAlias}}</a></td>
+                                          <td>{{row.status}}</td>
+                                          <td>{{row.runStarted}}</td>
+                                          <td>{{row.lastRunResult}}</td>
+                                          <td>{{row.lastSucessRunDate}}</td>
+                                          <td>{{row.lastSucessRunTotalTime}}</td>
+                                          <td>{{row.lastSucessRunAmountScrapedListings}}</td>
+                                          <td>{{row.currentListings}}</td>
+                                      </tr>
 
-                                        </tr>
-                                        <tr>
-                                          <td><input id="checkBox" type="checkbox"></td>
-                                          <td>immobileate.it</td>
-                                          <td>running</td>
-                                          <td>30 jul 2017</td>
-                                          <td>-</td>
-                                          <td>18 jul 2017</td>
-                                          <td>449 min</td>
-                                          <td>39,527</td>
-                                          <td>541,673</td>
-
-                                        </tr>
-                                        <tr>
-                                          <td><input id="checkBox" type="checkbox"></td>
-                                          <td>immobileate.it</td>
-                                          <td>down</td>
-                                          <td>-</td>
-                                          <td>validation error</td>
-                                          <td>-</td>
-                                          <td>-</td>
-                                          <td>-</td>
-                                          <td>541,673</td>
-
-                                        </tr>
                                       </tbody>
                                     </table>    
                               </div>             
@@ -125,48 +101,21 @@
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
+                                        <tr ng-repeat="row in allRunningStatus">
                                           <td><input id="checkBox" type="checkbox"></td>
-                                          <td>sellogo.com</td>
-                                          <td>job1(co)</td>
-                                          <td>29jul-15:24</td>
-                                          <td>-</td>
-                                          <td>700</td>
-                                          <td>1.67 sec</td>
-                                          <td>3 / 0</td>
-                                          <td>80</td>
-                                          <td>5%</td>
-                                          <td><span>0k:0</span>/<span>k0:0</span></td>
+                                          <td><a ng-href="#!/details/{{ row.scraperDetails.siteAlias }}">{{row.scraperDetails.siteAlias}}</a></td>
+                                          <td>{{row.step}}</td>
+                                          <td>{{row.runStartedTime}}</td>
+                                          <td>{{row.totalListingsOnSite}}</td>
+                                          <td>{{row.PPM}}</td>
+                                          <td>{{row.reqRes}} sec</td>
+                                          <td>{{row.failedBlocked}}</td>
+                                          <td>{{row.threads}}</td>
+                                          <td>{{row.progress}}%</td>
+                                          <td><span>OK:{{row.scrapedCountOK}}</span>/<span>KO:{{row.scrapedCountKO}}</span></td>
 
                                         </tr>
-                                        <tr>
-                                          <td><input id="checkBox" type="checkbox"></td>
-                                          <td>immobile.de</td>
-                                          <td>job1(co)</td>
-                                          <td>29jul-15:24</td>
-                                          <td>758,356</td>
-                                          <td>700</td>
-                                          <td>1.67 sec</td>
-                                          <td>3 / 0</td>
-                                          <td>80</td>
-                                          <td>5%</td>
-                                          <td><span>0k:0</span>/<span>k0:0</span></td>
 
-                                        </tr>
-                                        <tr>
-                                          <td><input id="checkBox" type="checkbox"></td>
-                                          <td>sellogo.com</td>
-                                          <td>job1(co)</td>
-                                          <td>29jul-15:24</td>
-                                          <td>758,356</td>
-                                          <td>700</td>
-                                          <td>1.67 sec</td>
-                                          <td>3 / 0</td>
-                                          <td>80</td>
-                                          <td>5%</td>
-                                          <td><span>0k:0</span>/<span>k0:0</span></td>
-
-                                        </tr>
                                       </tbody>                                   
                                     </table>
 

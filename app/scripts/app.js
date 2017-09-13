@@ -11,7 +11,9 @@
 var app = angular.module('morizonApp', [
     'ngCookies',
     'ngRoute',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'ui.grid',
+	'ui.grid.edit'
 ]);
 
 app.config(function($routeProvider) {

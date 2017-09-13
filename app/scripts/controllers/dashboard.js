@@ -70,4 +70,42 @@ angular.module('morizonApp').controller('DashboardCtrl', function ($scope, $http
             });
 
     };
+    $scope.fetchGeneralStatus = function () {
+
+        var url = "http://94.23.12.200:8181/api/v1/getGeneralStatus";
+        var config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        $http.get(url)
+            .then(function (response) {
+                    $scope.allGeneralStatus = response.data;
+
+                console.log("allGeneralStatus---", $scope.allGeneralStatus);
+            }, function (response) {
+                console.log('Not Worked ' + response);
+                //$scope.content = "Something went wrong";
+            });
+    };
+    $scope.fetchAllRunningStatus = function () {
+
+        var url = "http://94.23.12.200:8181/api/v1/getRunningStatus";
+        var config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        $http.get(url)
+            .then(function (response) {
+                    $scope.allRunningStatus = response.data;
+
+                console.log("allGeneralStatus---", $scope.allRunningStatus);
+            }, function (response) {
+                console.log('Not Worked ' + response);
+                //$scope.content = "Something went wrong";
+            });
+    };
+    $scope.fetchGeneralStatus();
+    $scope.fetchAllRunningStatus();
 });
