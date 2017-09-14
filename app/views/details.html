@@ -92,9 +92,9 @@
                                 <a href=""><img src="images/ic-3.jpg" alt=""></a>
                             </div>
                           <!-- Nav tabs -->
-                          <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Temp IDs</a></li>
-                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Details Data</a></li>
+                          <ul class="nav nav-tabs" role="tablist" ng-init="isTempShow = true">
+                            <li role="presentation" ng-class="isTempShow ? 'active':''"><a ng-click="isTempShow = true">Temp IDs</a></li>
+                            <li role="presentation" ng-class="!isTempShow ? 'active':''"><a ng-click="isTempShow = false">Details Data</a></li>
                           </ul>
 
                           <!-- Tab panes -->
@@ -383,7 +383,7 @@
             </div>
         </section>
 
-        <div>
+        <div ng-if="isTempShow">
           <h1>Temp IDs</h1>
           <section>
             <div class="pull-right">
@@ -396,7 +396,7 @@
           </section>
         </div>
 
-        <div>
+        <div ng-if="!isTempShow">
           <h1>Details Data</h1>
           <section>
             <div class="pull-right">

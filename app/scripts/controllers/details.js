@@ -130,9 +130,17 @@ angular.module('morizonApp').controller('DetailsCtrl', function ($scope, $http, 
         var retObj = [];
         for (var key in data) {
 
-            retObj.push({
-                field: key
-            })
+            if(key == "Url"){
+                retObj.push({ field: 'Url',
+                    cellTemplate:'<div>' +
+                    '<a href="http://stackoverflow.com">Click me</a>' +
+                    '</div>' })
+            }else{
+
+                retObj.push({
+                    field: key
+                })
+            }
         }
         return retObj;
     };

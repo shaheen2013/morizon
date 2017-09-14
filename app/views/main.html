@@ -10,15 +10,15 @@
                                 </a>
                             </div>
                           <!-- Nav tabs -->
-                          <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General View</a></li>
-                            <li role="presentation"><a href="#running" aria-controls="running" role="tab" data-toggle="tab">Running View</a></li>
+                          <ul class="nav nav-tabs" role="tablist" ng-init="isGeneralShow = true">
+                              <li role="presentation" ng-class="isGeneralShow ? 'active':''"><a ng-click="isGeneralShow = true">General View</a></li>
+                              <li role="presentation" ng-class="!isGeneralShow ? 'active':''"><a ng-click="isGeneralShow = false">Running View</a></li>
                           </ul>
                           <br>
                           <br>
                           <!-- Tab panes -->
                           <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="general">
+                            <div role="tabpanel" class="tab-pane active" id="general" ng-if="isGeneralShow">
                             <div class="run_area">
                                 <select>
                                   <option value="0">ALL</option>
@@ -67,7 +67,7 @@
                                     </table>    
                               </div>             
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="running">
+                            <div  ng-if="!isGeneralShow">
                             <div class="run_area">
                                 <select>
                                   <option value="volvo"></option>
